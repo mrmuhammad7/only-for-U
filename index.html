@@ -4,7 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Happy Birthday My Love</title>
+        <link rel="stylesheet" href="css/all.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="imgs/icon.png" />
     </head>
     <body>
         <div class="floating-elements" id="floatingElements"></div>
@@ -12,17 +20,53 @@
         <header class="header">
             <h1>Happy Birthday, My Love!</h1>
             <p>
-                On this special day, I want you to know how much you mean to me.
-                You're the most beautiful person I've ever known, inside and
-                out.
+                If i could give you one thing in life, I would give you the
+                ability to see yourself through my eyes. Only then will you
+                realize how special you are ...
             </p>
             <p class="birthday-girl">
                 To the most amazing girlfriend in the world
             </p>
             <div class="gift-btn-container">
                 <button class="gift-btn" id="giftBtn">
-                    Open Your Gift Message
+                    Open Your Gift Book!
                 </button>
+            </div>
+            <div id="flipbook" class="flipbook hidden" aria-hidden="true">
+                <div class="hard">
+                    A simple gift for the dearest person <br />
+                    in my life <small>~ Mr_Muhammad </small>
+                </div>
+                <div
+                    class="hard"
+                    style="background-color: rgb(146 68 68) !important"
+                >
+                    <img src="imgs/SM1.jpg" alt="" />
+                </div>
+                <div>
+                    <small dir="rtl">تكتب اسمي يا حبيبي ع رمل الطريق ❤️</small>
+                </div>
+                <div>
+                    <img src="imgs/myEye1.jpg" alt="" />
+                    <small> My Eye</small>
+                </div>
+                <div>
+                    <img src="imgs/MLlovesEye.jpg" alt="" />
+                    <small> My Love's Eye </small>
+                </div>
+                <div>
+                    <img src="imgs/1.jpg" alt="" />
+                    <!-- <small> Arbok </small> -->
+                </div>
+                <div>
+                    <img src="imgs/2.jpg" alt="" />
+                    <!-- <small> Mew </small> -->
+                </div>
+                <div>
+                    <img src="imgs/3.png" alt="" />
+                </div>
+                <div class="hard"></div>
+                <div class="hard">I Love U 😘<small>~ Mr_Muhammad </small></div>
             </div>
         </header>
 
@@ -32,17 +76,12 @@
                 <div class="memory-item">
                     <div class="memory-icon">💑</div>
                     <h3>Our First Date</h3>
-                    <p>That magical evening when everything began</p>
-                </div>
-                <div class="memory-item">
-                    <div class="memory-icon">🌅</div>
-                    <h3>Sunset Walks</h3>
-                    <p>Hand in hand, watching the sky change colors</p>
+                    <p>soon..</p>
                 </div>
                 <div class="memory-item">
                     <div class="memory-icon">🎬</div>
                     <h3>Movie Nights</h3>
-                    <p>Cuddled up with popcorn and your favorite films</p>
+                    <p>I enjoy your movies as if we are together.</p>
                 </div>
                 <div class="memory-item">
                     <div class="memory-icon">🎉</div>
@@ -58,19 +97,19 @@
                 <div class="wish-item">
                     <p>
                         I wish you endless happiness and joy on your special day
-                        and always.
+                        always.
                     </p>
                 </div>
                 <div class="wish-item">
                     <p>
-                        May all your dreams come true and your heart be filled
-                        with love.
+                        I hope all your dreams come true and become the best
+                        English teacher in my life.
                     </p>
                 </div>
                 <div class="wish-item">
                     <p>
-                        I wish you health, success, and beautiful moments that
-                        take your breath away.
+                        I wish you success, happiness, and unforgettable
+                        moments.
                     </p>
                 </div>
                 <div class="wish-item">
@@ -82,127 +121,15 @@
             </div>
         </section>
 
-        <div
-            class="gift-modal"
-            id="giftModal"
-            role="dialog"
-            aria-modal="true"
-            aria-hidden="true"
-            aria-label="Gift message dialog"
-        >
-            <div class="book-container">
-                <div class="book">
-                    <div
-                        class="cover"
-                        id="bookCover"
-                        role="button"
-                        tabindex="0"
-                        aria-pressed="false"
-                        aria-label="Open book to read message"
-                    >
-                        <h2>For My Love</h2>
-                        <p>Click to open</p>
-                    </div>
-                    <div class="pages">
-                        <button
-                            class="close-btn"
-                            id="closeBtn"
-                            aria-label="Close message"
-                        >
-                            ×
-                        </button>
-                        <div class="pages-content">
-                            <div class="page active" id="page1">
-                                <div class="message-content">
-                                    <h2>My Dearest Love,</h2>
-                                    <p>
-                                        On your special day, I want to remind
-                                        you how incredibly special you are to
-                                        me.
-                                    </p>
-                                    <p>
-                                        Your smile lights up my world, your
-                                        laughter is my favorite melody, and your
-                                        love is the greatest gift I've ever
-                                        received.
-                                    </p>
-                                    <p>
-                                        I cherish every moment we spend
-                                        together, from our quiet mornings to our
-                                        adventurous days.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="page" id="page2">
-                                <div class="message-content">
-                                    <p>
-                                        You've brought so much joy and meaning
-                                        into my life. Every day with you is a
-                                        blessing that I don't take for granted.
-                                    </p>
-                                    <p>
-                                        Today, I wish you all the happiness in
-                                        the world. May this year bring you
-                                        closer to your dreams and fill your life
-                                        with beautiful moments.
-                                    </p>
-                                    <p>
-                                        May each day be filled with laughter,
-                                        love, and the fulfillment of your
-                                        heart's desires.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="page" id="page3">
-                                <div class="message-content">
-                                    <p>
-                                        Thank you for being you, and for sharing
-                                        your life with me. You are my greatest
-                                        treasure, my confidant, and my best
-                                        friend.
-                                    </p>
-                                    <p>
-                                        I look forward to creating many more
-                                        beautiful memories with you, growing
-                                        together, and supporting each other
-                                        through all of life's adventures.
-                                    </p>
-                                    <p>With all my love,</p>
-                                    <p>Your devoted partner</p>
-                                </div>
-                            </div>
-                            <div class="page-controls">
-                                <button
-                                    class="page-btn"
-                                    id="prevBtn"
-                                    disabled
-                                    aria-label="Previous page"
-                                >
-                                    Previous
-                                </button>
-                                <span
-                                    class="page-indicator"
-                                    id="pageIndicator"
-                                    aria-live="polite"
-                                    >Page 1 of 3</span
-                                >
-                                <button
-                                    class="page-btn"
-                                    id="nextBtn"
-                                    aria-label="Next page"
-                                >
-                                    Next
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <p>Made with 💖 for the most amazing person</p>
+        <footer class="footer" style="font-size: 14px">
+            <p>Made with Love for the most amazing person</p>
+            <p>Mr_Muhammad 🦇</p>
+            <a href="#" class="btn-primary"
+                ><i class="fa fa-angle-double-up"></i
+            ></a>
         </footer>
+        <script src="js/jquery.js"></script>
+        <script src="js/turn.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

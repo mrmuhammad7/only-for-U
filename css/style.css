@@ -1,504 +1,522 @@
 :root {
-                --primary: #ffb6c1;
-                --secondary: #f8e0e6;
-                --accent: #d4a5b5;
-                --text: #5d5d5d;
-                --white: #ffffff;
-                --shadow: rgba(0, 0, 0, 0.1);
-            }
+    --primary: #ffb6c1;
+    --secondary: #f8e0e6;
+    --accent: #d4a5b5;
+    --text: #5d5d5d;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
 
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: "Arial", sans-serif;
-            }
+html {
+    scroll-behavior: smooth;
+}
 
-            body {
-                background-color: var(--secondary);
-                color: var(--text);
-                line-height: 1.6;
-                overflow-x: hidden;
-            }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
 
-            .header {
-                background: linear-gradient(
-                    135deg,
-                    var(--primary),
-                    var(--accent)
-                );
-                color: var(--white);
-                text-align: center;
-                padding: 60px 20px;
-                position: relative;
-                overflow: hidden;
-                min-height: 100vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
+body {
+    background-color: var(--secondary);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-            .header h1 {
-                font-size: 2.5rem;
-                margin-bottom: 20px;
-                opacity: 0;
-                animation: fadeIn 2s forwards;
-                animation-delay: 0.5s;
-                position: relative;
-                z-index: 2;
-            }
+.header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-            .header p {
-                font-size: 1.2rem;
-                max-width: 600px;
-                margin: 0 auto 30px;
-                opacity: 0;
-                animation: fadeIn 2s forwards;
-                animation-delay: 1s;
-                position: relative;
-                z-index: 2;
-            }
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    position: relative;
+    z-index: 3;
+}
 
-            .birthday-girl {
-                font-weight: bold;
-                font-size: 1.4rem;
-                color: var(--white);
-                text-shadow: 1px 1px 3px var(--shadow);
-                position: relative;
-                z-index: 2;
-            }
+.header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 0.4s;
+    position: relative;
+    z-index: 3;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
 
-            .section {
-                padding: 60px 20px;
-                max-width: 1200px;
-                margin: 0 auto;
-                opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 0.8s, transform 0.8s;
-                position: relative;
-                z-index: 2;
-            }
+.birthday-girl {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 3px var(--shadow);
+    animation: fadeIn 1.5s forwards !important;
+    animation-delay: 0.8s !important;
+    margin-bottom: 0px !important;
+}
 
-            .section.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-            .section-title {
-                text-align: center;
-                margin-bottom: 40px;
-                color: var(--accent);
-                font-size: 2rem;
-            }
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--accent);
+    font-size: 2rem;
+    position: relative;
+    z-index: 3;
+}
 
-            .memories {
-                background-color: var(--white);
-                border-radius: 10px;
-                box-shadow: 0 5px 15px var(--shadow);
-            }
+.memories {
+    margin-top: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow);
+}
 
-            .memory-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 20px;
-            }
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
 
-            .memory-item {
-                background-color: var(--secondary);
-                border-radius: 8px;
-                padding: 20px;
-                text-align: center;
-                transition: transform 0.3s;
-            }
+.memory-item {
+    background-color: var(--secondary);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 3px 10px var(--shadow);
+    position: relative;
+    z-index: 3;
+}
 
-            .memory-item:hover {
-                transform: translateY(-5px);
-            }
+.memory-item:hover {
+    transform: translateY(-5px);
+}
 
-            .memory-icon {
-                font-size: 2rem;
-                margin-bottom: 10px;
-                color: var(--accent);
-            }
+.memory-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
 
-            .wishes {
-                background-color: var(--secondary);
-            }
+.memory-item p,
+.memory-item h3,
+.wish-item p,
+.footer p {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
 
-            .wish-list {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
+.wishes {
+    background-color: var(--secondary);
+}
 
-            .wish-item {
-                background-color: var(--white);
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 3px 10px var(--shadow);
-                position: relative;
-                padding-left: 60px;
-            }
+.wish-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-            .wish-item:before {
-                content: "💕";
-                position: absolute;
-                left: 20px;
-                top: 20px;
-                font-size: 1.5rem;
-            }
+.wish-item {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px var(--shadow);
+    position: relative;
+    padding-left: 60px;
+    z-index: 2;
+}
 
-            .gift-btn-container {
-                text-align: center;
-                margin: 40px 0;
-                position: relative;
-                z-index: 2;
-            }
+.wish-item:before {
+    content: "💕";
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 1.5rem;
+}
 
-            .gift-btn {
-                background: linear-gradient(
-                    135deg,
-                    var(--primary),
-                    var(--accent)
-                );
-                color: var(--white);
-                border: none;
-                padding: 15px 30px;
-                font-size: 1.2rem;
-                border-radius: 50px;
-                cursor: pointer;
-                box-shadow: 0 5px 15px var(--shadow);
-                transition: transform 0.3s, box-shadow 0.3s;
-            }
+.gift-btn-container {
+    text-align: center;
+    margin: 20px 0 40px;
+    position: relative;
+    z-index: 3;
+}
 
-            .gift-btn:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 8px 20px var(--shadow);
-            }
+.gift-btn {
+    background: linear-gradient(135deg, #ff6b9d 0%, #ff8e8e 100%);
+    color: white;
+    border: 2px solid #ff3366;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 6px 0 #ff3366, 0 10px 25px rgba(255, 107, 157, 0.4),
+        inset 0 0 15px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 1s;
+}
 
-            .gift-modal {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.7);
-                z-index: 1000;
-                justify-content: center;
-                align-items: center;
-                opacity: 0;
-                transition: opacity 0.8s ease;
-            }
+.gift-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 0 #ff3366, 0 15px 30px rgba(255, 107, 157, 0.5),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(135deg, #ff8e8e 0%, #ff6b9d 100%);
+}
 
-            .gift-modal.show {
-                opacity: 1;
-            }
+.gift-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 0 #ff3366, 0 8px 20px rgba(255, 107, 157, 0.3);
+}
 
-            .book-container {
-                width: 90%;
-                max-width: 500px;
-                height: 70vh;
-                max-height: 600px;
-                perspective: 2000px;
-                position: relative;
-                transform: scale(0.8) rotate(45deg);
-                opacity: 0;
-                transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1),
-                    opacity 1.2s ease;
-            }
+.gift-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 70%
+    );
+    z-index: -1;
+    animation: shimmer 3s infinite linear;
+    border-radius: 50px;
+}
 
-            .gift-modal.show .book-container {
-                transform: scale(1) rotate(0deg);
-                opacity: 1;
-            }
+.floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
 
-            .book {
-                width: 100%;
-                height: 100%;
-                position: relative;
-                transform-style: preserve-3d;
-            }
+.floating-element {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0;
+    animation: floatUp 8s linear infinite;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
 
-            .cover {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(
-                        135deg,
-                        var(--primary) 0%,
-                        var(--accent) 100%
-                    );
-                border-radius: 8px 0 0 8px;
-                transform-origin: left;
-                transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
-                    5px 0 20px rgba(0, 0, 0, 0.2),
-                    inset -5px 0 10px rgba(0, 0, 0, 0.1);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                cursor: pointer;
-                z-index: 2;
-                border-right: 2px solid rgba(0, 0, 0, 0.1);
-            }
+.footer {
+    text-align: center;
+    padding: 20px 20px 15px;
+    background-color: var(--accent);
+    color: var(--white);
+}
 
-            .cover:before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(
-                    45deg,
-                    transparent 90%,
-                    rgba(0, 0, 0, 0.1) 100%
-                );
-                border-radius: 8px 0 0 8px;
-                pointer-events: none;
-            }
+.footer p {
+    position: relative;
+    z-index: 3;
+}
 
-            .cover h2 {
-                font-size: 1.8rem;
-                margin-bottom: 10px;
-                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-                transition: transform 0.8s, opacity 0.8s;
-            }
+.footer p:last-of-type {
+    text-align: end;
+    font-size: 12px;
+    margin-top: 10px;
+}
 
-            .cover p {
-                transition: transform 0.8s, opacity 0.8s;
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-            }
+footer > a:last-of-type {
+    position: fixed;
+    padding: 5px 12px;
+    background-color: var(--primary);
+    border-radius: 5px;
+    color: var(--white);
+    left: -100px;
+    bottom: -100px;
+    transition: all 0.4s linear;
+    z-index: 1000;
+}
 
-            .cover.open {
-                transform: rotateY(-160deg);
-            }
+footer > a.show:last-of-type {
+    bottom: 10px;
+    left: 10px;
+    opacity: 0.7;
+}
 
-            .cover.open h2,
-            .cover.open p {
-                opacity: 0;
-                transform: scale(0.8);
-            }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
-            .pages {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(to bottom, #f9f9f9 0%, #f0f0f0 100%),
-                    repeating-linear-gradient(
-                        0deg,
-                        transparent,
-                        transparent 24px,
-                        #e6e6e6 24px,
-                        #e6e6e6 25px
-                    );
-                border-radius: 0 8px 8px 0;
-                padding: 30px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
-                    inset 0 0 20px rgba(0, 0, 0, 0.05);
-                opacity: 0;
-                transform: translateX(-20px) scale(0.95);
-                transition: opacity 0.8s, transform 0.8s;
-                border-left: 1px solid rgba(0, 0, 0, 0.1);
-                display: flex;
-                flex-direction: column;
-            }
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100px) translateX(20px) rotate(360deg);
+        opacity: 0;
+    }
+}
 
-            .cover.open + .pages {
-                opacity: 1;
-                transform: translateX(0) scale(1);
-                transition-delay: 0.8s;
-            }
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
 
-            .pages-content {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-                overflow: hidden;
-            }
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
 
-            .page {
-                display: none;
-                flex: 1;
-                overflow-y: auto;
-                padding: 10px;
-            }
+    .header p {
+        font-size: 1rem;
+    }
 
-            .page.active {
-                display: block;
-            }
+    .header p.birthday-girl {
+        font-size: 0.9rem;
+    }
 
-            .message-content {
-                text-align: center;
-                padding: 20px;
-                opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 1s, transform 1s;
-            }
+    .section-title {
+        font-size: 1.7rem;
+    }
 
-            .cover.open + .pages .message-content {
-                opacity: 1;
-                transform: translateY(0);
-                transition-delay: 1.2s;
-            }
+    .memories {
+        margin-top: 0px;
+    }
 
-            .message-content h2 {
-                color: var(--accent);
-                margin-bottom: 20px;
-                font-size: 1.8rem;
-            }
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
 
-            .message-content p {
-                margin-bottom: 15px;
-                font-size: 1.1rem;
-                line-height: 1.8;
-                text-align: left;
-            }
+    .floating-element {
+        font-size: 20px;
+    }
 
-            .page-controls {
-                display: flex;
-                justify-content: space-between;
-                padding: 10px 0;
-                border-top: 1px solid rgba(0, 0, 0, 0.1);
-                margin-top: 10px;
-            }
+    /* ensure flipbook stays centered on small screens */
+    .flipbook {
+        margin: 16px auto;
+    }
 
-            .page-btn {
-                background: var(--accent);
-                color: white;
-                border: none;
-                padding: 8px 15px;
-                border-radius: 4px;
-                cursor: pointer;
-                transition: background 0.3s;
-            }
+    .header {
+        padding: 40px 10px;
+    }
+}
 
-            .page-btn:hover {
-                background: var(--primary);
-            }
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+    .header {
+        padding: 30px 8px;
+        min-height: auto;
+    }
 
-            .page-btn:disabled {
-                background: #ccc;
-                cursor: not-allowed;
-            }
+    .header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
 
-            .page-indicator {
-                font-size: 0.9rem;
-                color: var(--text);
-                align-self: center;
-            }
+    .header p {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
 
-            .close-btn {
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                background: none;
-                border: none;
-                font-size: 1.5rem;
-                color: var(--accent);
-                cursor: pointer;
-                z-index: 10;
-                opacity: 0;
-                transition: opacity 0.5s;
-                background: rgba(255, 255, 255, 0.8);
-                border-radius: 50%;
-                width: 35px;
-                height: 35px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            }
+    .header p.birthday-girl {
+        font-size: 0.8rem;
+    }
 
-            .cover.open + .pages .close-btn {
-                opacity: 1;
-                transition-delay: 1.5s;
-            }
+    .gift-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
 
-            .floating-elements {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-                z-index: 1;
-                overflow: hidden;
-            }
+    .flipbook {
+        margin: 12px auto;
+        width: 95%;
+    }
+}
 
-            .floating-element {
-                position: absolute;
-                font-size: 24px;
-                opacity: 0;
-                animation: floatUp 8s linear infinite;
-                z-index: 1;
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            }
+/* Ensure flipbook doesn't get squeezed - maintain width calculation */
+@media (max-width: 360px) {
+    .flipbook {
+        width: 98%;
+    }
+}
 
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                }
-                to {
-                    opacity: 1;
-                }
-            }
+/* Large screens (> 1024px) - ensure flipbook is centered */
+@media (min-width: 1025px) {
+    .flipbook {
+        width: 1000px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
 
-            @keyframes floatUp {
-                0% {
-                    transform: translateY(100vh) translateX(0) rotate(0deg);
-                    opacity: 0;
-                }
-                10% {
-                    opacity: 0.7;
-                }
-                90% {
-                    opacity: 0.7;
-                }
-                100% {
-                    transform: translateY(-100px) translateX(20px)
-                        rotate(360deg);
-                    opacity: 0;
-                }
-            }
+/* Image overlay (lightbox) for flipbook images */
+.img-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+.img-overlay.show {
+    opacity: 1;
+}
+.img-overlay img {
+    max-width: 95vw;
+    max-height: 95vh;
+    width: auto;
+    height: auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    cursor: default;
+}
 
-            .footer {
-                text-align: center;
-                padding: 30px 20px;
-                background-color: var(--accent);
-                color: var(--white);
-                position: relative;
-                z-index: 2;
-            }
+/* prevent the flipbook behind from reacting to touch when overlay is open */
+body.overlay-open {
+    touch-action: none;
+    overscroll-behavior: contain;
+}
 
-            @media (max-width: 768px) {
-                .header h1 {
-                    font-size: 2rem;
-                }
+.flipbook {
+    width: 100%;
+    max-width: 1000px;
+    /* keep a book-like aspect ratio (1000x600) */
+    aspect-ratio: 1000 / 600;
+    height: auto;
+    position: relative;
+    z-index: 10;
+}
 
-                .header p {
-                    font-size: 1rem;
-                }
+/* Hidden by default; will be revealed when gift button is clicked */
+.flipbook {
+    transition: transform 360ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 360ms ease;
+    transform-origin: center center;
+}
 
-                .section-title {
-                    font-size: 1.7rem;
-                }
+/* Fully removed from layout when closed */
+.flipbook.hidden {
+    display: none !important;
+    opacity: 0;
+    transform: scale(0.92);
+}
 
-                .memory-grid {
-                    grid-template-columns: 1fr;
-                }
+/* Transitional state used to start the opening animation */
+.flipbook.animating,
+.flipbook.hiding {
+    display: block;
+    opacity: 0;
+    transform: scale(0.92);
+}
 
-                .book-container {
-                    width: 95%;
-                    height: 80vh;
-                }
+/* Visible/open state (scaled up) */
+.flipbook.visible {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
 
-                .floating-element {
-                    font-size: 20px;
-                }
-            }
+.flipbook .hard {
+    background: #c0392b !important;
+    color: #fff;
+}
+
+.flipbook .hard img {
+    object-fit: cover;
+    padding: 20px;
+    width: 100%;
+    height: 104%;
+    border-radius: 25px;
+    position: relative;
+}
+
+.flipbook .hard small {
+    font-style: italic;
+    font-weight: lighter;
+    opacity: 0.7;
+    font-size: 14px;
+    position: absolute;
+    bottom: 5px;
+}
+
+.flipbook .page {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.page img {
+    width: 70%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.page:last-of-type img {
+    width: 95%;
+}
+
+.flipbook .page small {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #000;
+}
